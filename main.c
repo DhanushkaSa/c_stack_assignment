@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 
 #define MAX 100
 
@@ -11,21 +10,29 @@ float stack[MAX];
 int top = -1;
 
 // PUSH function
-void push(float value) {
-    if(top == MAX - 1) {
-        printf("Stack Overflow!\n");
-    } else {
+void push(float value)
+{
+    if (top == MAX - 1)
+    {
+        printf("Error: Stack Overflow!\n");
+    }
+    else
+    {
         top++;
         stack[top] = value;
     }
 }
 
 // POP function
-float pop() {
-    if(top == -1) {
-        printf("Stack Underflow!\n");
+float pop()
+{
+    if (top == -1)
+    {
+        printf("Error: Stack Underflow!\n");
         return 0;
-    } else {
+    }
+    else
+    {
         float value = stack[top];
         top--;
         return value;
@@ -33,15 +40,20 @@ float pop() {
 }
 
 // Display stack
-void displayStack() {
+void displayStack()
+{
     int i;
 
     printf("Current Stack: ");
 
-    if(top == -1) {
+    if (top == -1)
+    {
         printf("Empty");
-    } else {
-        for(i = 0; i <= top; i++) {
+    }
+    else
+    {
+        for (i = 0; i <= top; i++)
+        {
             printf("%.2f ", stack[i]);
         }
     }
@@ -49,9 +61,8 @@ void displayStack() {
     printf("\n");
 }
 
-int main() {
-
-
+int main()
+{
 
     return 0;
 }
