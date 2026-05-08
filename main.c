@@ -99,7 +99,8 @@ int main()
                 printf("Error: Invalid number input!\n");
 
                 // Clear invalid input buffer
-                while (getchar() != '\n');
+                while (getchar() != '\n')
+                    ;
 
                 break;
             }
